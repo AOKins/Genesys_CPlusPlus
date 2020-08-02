@@ -2,6 +2,9 @@
 #include <random>
 #include "../headers/dice_calc.h"
 
+// simulate rolling a boost die
+// input: output pointer array of length three for the 6 types of results in three categories to store (SUCCESS/ADVANTAGE/TRIUMPH)
+// output: output contains values of result according to rulebook
 void rollBoost(int * output) {
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::mt19937 rng(seed);
@@ -35,6 +38,9 @@ void rollBoost(int * output) {
     }
 }
 
+// simulate rolling a setback die
+// input: output pointer array of length three for the 6 types of results in three categories to store (SUCCESS/ADVANTAGE/TRIUMPH)
+// output: output contains values of result according to rulebook
 void rollSetback(int * output) {
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::mt19937 rng(seed);
@@ -68,6 +74,9 @@ void rollSetback(int * output) {
     }
 }
 
+// simulate rolling an ability die
+// input: output pointer array of length three for the 6 types of results in three categories to store (SUCCESS/ADVANTAGE/TRIUMPH)
+// output: output contains values of result according to rulebook
 void rollAbility(int * output) {
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::mt19937 rng(seed);
@@ -109,6 +118,9 @@ void rollAbility(int * output) {
     }
 }
 
+// simulate rolling a difficulty die
+// input: output pointer array of length three for the 6 types of results in three categories to store (SUCCESS/ADVANTAGE/TRIUMPH)
+// output: output contains values of result according to rulebook
 void rollDifficulty(int * output) {
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::mt19937 rng(seed);
@@ -150,6 +162,9 @@ void rollDifficulty(int * output) {
     }
 }
 
+// simulate rolling a proficiency die
+// input: output pointer array of length three for the 6 types of results in three categories to store (SUCCESS/ADVANTAGE/TRIUMPH)
+// output: output contains values of result according to rulebook
 void rollProficiency(int * output) {
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::mt19937 rng(seed);
@@ -207,6 +222,9 @@ void rollProficiency(int * output) {
     }
 }
 
+// simulate rolling a challenge die
+// input: output pointer array of length three for the 6 types of results in three categories to store (SUCCESS/ADVANTAGE/TRIUMPH)
+// output: output contains values of result according to rulebook
 void rollChallenge(int * output) {
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::mt19937 rng(seed);
@@ -288,9 +306,6 @@ void rollDie(const DICE_TYPE dice_type, int* output) {
     }
 }
 
-
-
-
 // Simulate rolling a dice pool for a difficulty check
 // input: difficulty - Difficulty level equivalent to adding more difficulty dice, should range from 0 (Simple) to 5 (Formidable)
 //        challenge  - Equivalent to number of challenge dice being put into the pool
@@ -300,8 +315,7 @@ void rollDie(const DICE_TYPE dice_type, int* output) {
 //        boost - equivalent to adding boost dice
 //        ouput - pointer to array length 3 to assign the results to
 // output: output contains a sum of the results
+// CURRENTLY NOT IMPLEMENTED
 void dicePoolRoll(const int& difficulty, const int& challenge, const int& setback, const int& ability, const int& proficiency, const int& boost, int* output) {
-
-
-
+    
 }
