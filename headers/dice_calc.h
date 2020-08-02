@@ -12,11 +12,13 @@ enum DICE_TYPE {
 };
 
 // Enumeration for index values for use in output
-// failure/threat/despair are in same index as success/advantage/triumph respectively but are described as negative values rather than positive
+// failure/threat are in same index as success/advantage respectively but are described as negative values rather than positive as they can be cancelled by each other
+// whereas triumph and despair can not be cancelled out completely by each other
 enum RESULT_INDEX {
     SUCCESS,
     ADVANTAGE,
     TRIUMPH,
+    DESPAIR,
 };
 
 // simulate rolling a boost die
